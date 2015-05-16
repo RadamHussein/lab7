@@ -1,9 +1,8 @@
-#include <iostream>
-
-using namespace std;
+#include "node.h"
 
 class List
 {
+/*
 protected:
 	struct Node
 	{
@@ -15,13 +14,12 @@ protected:
 			next = next1;
 		}
 	};
+*/
+private:
 	Node *head;
 public:
 	//constructor
-	List()
-	{
-		head = NULL;
-	}
+	List();
 	~List();	//destructor
 	void addNumber(int number);
 	void remove(int number);
