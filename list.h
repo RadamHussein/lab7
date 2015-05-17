@@ -8,7 +8,6 @@ public:
 	//constructor
 	List();
 	~List();	//destructor
-	void addNumber(int number);	//remove later
 	void addFront(int number);
 	void addBack(int number);
 	int removeFront();

@@ -10,9 +10,9 @@ List::List()
 	head = NULL;
 }
 /********************************************************************
- * addNumber
+ * addBack
  *******************************************************************/
-void List::addNumber(int number)
+void List::addBack(int number)
 {
 	if (head == NULL)
 	{
@@ -30,6 +30,23 @@ void List::addNumber(int number)
 	}
 }
 
+/********************************************************************
+ * addFront()
+********************************************************************/
+/*void List::addFront(int number)
+{
+	if (head == NULL)
+	{
+		head = new Node(number);
+	}
+	else
+	{
+		Node *ptrNode = head;
+		ptrNode->next = new Node(number);
+		Node *addNode = new Node();
+		addNode->next = 
+	}
+*/}	
 /********************************************************************
  * destructor
  *******************************************************************/

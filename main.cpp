@@ -6,17 +6,17 @@ using namespace std;
 int main()
 {
 	cout << endl << endl;
-	cout << "First we will create a new list with 3 integer values";
-	cout << " 10, 13 and 17." << endl;
+	cout << "Now, let's demonstrate a queue-like list by adding";
+	cout << " 10, 13 and 17 to the list in that order." << endl;
 	cout << "Press [ENTER] to continue:";
 	cin.get();
 
 	List myList;
-	myList.addNumber(10);
+	myList.addBack(10);
 	cout << "10 has been added to the list" << endl;
-	myList.addNumber(13);
+	myList.addBack(13);
 	cout << "13 has been added to the list" << endl;
-	myList.addNumber(17);
+	myList.addBack(17);
 	cout << "17 has been added to the list" << endl << endl;
 	myList.print();
 
@@ -27,6 +27,23 @@ int main()
 	myList.remove(10);
 	cout << endl;
 	myList.print();
+	cout << endl;
+
+	cout << "Now we will demonstrate a stack-like list by adding";
+	cout << " new items to the front of the list." << endl;
+	cout << "Let's add integers 19, 20 and 21" << endl;
+	cout << "Press [ENTER] to continue: ";
+	cin.get();
+	cout << endl;
+
+	myList.addFront(19);
+	cout << "19 has been added to the list" << endl;
+	myList.addFront(20);
+	cout << "20 has been added to the list" << endl;
+	myList.addFront(21);
+	cout << "21 has been added to the list" << endl << endl;
+	myList.print();
+	cout << endl;
 	
 	return 0;
 }
