@@ -47,5 +47,14 @@ int main()
 	myList.print();
 	cout << endl << endl;
 	
+	cout << "Now we will remove the first number in the list" << endl;
+	cout << "Press [ENTER] to continue: ";
+	cin.get();
+	cout << endl;
+	cout << myList.removeFront() << " has been removed from the list";
+	cout << endl;
+	myList.print();
+	cout << endl << endl;
+	
 	return 0;
 }

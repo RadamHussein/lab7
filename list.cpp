@@ -114,3 +114,25 @@ void List::remove(int number)
 		}
 	}
 }
+
+/**************************************************************
+ * removeFront()
+**************************************************************/
+int List::removeFront()
+{
+	Node *ptrNode;
+
+	if (!head)
+	{
+		return 0;
+	}
+	
+	else
+	{	
+		int value = head->value;
+		ptrNode = head;
+		head = head->next;
+		delete ptrNode;
+		return value;
+	}
+}
