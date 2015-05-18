@@ -33,7 +33,7 @@ void List::addBack(int number)
 /********************************************************************
  * addFront()
 ********************************************************************/
-/*void List::addFront(int number)
+void List::addFront(int number)
 {
 	if (head == NULL)
 	{
@@ -41,12 +41,15 @@ void List::addBack(int number)
 	}
 	else
 	{
-		Node *ptrNode = head;
-		ptrNode->next = new Node(number);
-		Node *addNode = new Node();
-		addNode->next = 
+		head = new Node(number, head);
+		
+		
+		
+		
+		
+		
 	}
-*/}	
+}	
 /********************************************************************
  * destructor
  *******************************************************************/

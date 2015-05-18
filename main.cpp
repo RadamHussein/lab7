@@ -10,6 +10,7 @@ int main()
 	cout << " 10, 13 and 17 to the list in that order." << endl;
 	cout << "Press [ENTER] to continue:";
 	cin.get();
+	cout << endl;
 
 	List myList;
 	myList.addBack(10);
@@ -19,6 +20,7 @@ int main()
 	myList.addBack(17);
 	cout << "17 has been added to the list" << endl << endl;
 	myList.print();
+	cout << endl;
 
 	cout << endl;
 	cout << "Now we will remove the first item from the list" << endl;
@@ -27,7 +29,7 @@ int main()
 	myList.remove(10);
 	cout << endl;
 	myList.print();
-	cout << endl;
+	cout << endl << endl;
 
 	cout << "Now we will demonstrate a stack-like list by adding";
 	cout << " new items to the front of the list." << endl;
@@ -43,7 +45,7 @@ int main()
 	myList.addFront(21);
 	cout << "21 has been added to the list" << endl << endl;
 	myList.print();
-	cout << endl;
+	cout << endl << endl;
 	
 	return 0;
 }
