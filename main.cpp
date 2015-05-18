@@ -82,12 +82,12 @@ int main()
 	cout << endl << endl;
 	
 	//instructions to user
-	cout << "Now we will remove the last number in the list" << endl;
+	cout << "Now we will remove the first number in the list" << endl;
 	cout << "Press [ENTER] to continue: ";
 	cin.get();
 	cout << endl;
 
-	//remove element from back of list
+	//remove element from fron of list
 	cout << myList.removeFront() << " has been removed from the list";
 	cout << endl;
 
