@@ -88,7 +88,7 @@ int main()
 	cout << endl;
 
 	//remove element from back of list
-	cout << myList.removeBack() << " has been removed from the list";
+	cout << myList.removeFront() << " has been removed from the list";
 	cout << endl;
 
 	//print list
