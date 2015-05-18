@@ -61,6 +61,7 @@ int main()
 	myList.print();
 	cout << endl << endl;
 
+	List stackList;
 	//instructions to user
 	cout << "Now we will demonstrate a stack-like list by adding" << endl;
 	cout << "new items to the front of the list." << endl;;
@@ -70,15 +71,15 @@ int main()
 	cout << endl;
 
 	//add elements to front of list
-	myList.addFront(19);
+	stackList.addFront(19);
 	cout << "19 has been added to the list" << endl;
-	myList.addFront(20);
+	stackList.addFront(20);
 	cout << "20 has been added to the list" << endl;
-	myList.addFront(21);
+	stackList.addFront(21);
 	cout << "21 has been added to the list" << endl << endl;
 	
 	//print list
-	myList.print();
+	stackList.print();
 	cout << endl << endl;
 	
 	//instructions to user
@@ -88,11 +89,11 @@ int main()
 	cout << endl;
 
 	//remove element from fron of list
-	cout << myList.removeFront() << " has been removed from the list";
+	cout << stackList.removeFront() << " has been removed from the list";
 	cout << endl;
 
 	//print list
-	myList.print();
+	stackList.print();
 	cout << endl << endl;
 	
 	return 0;
