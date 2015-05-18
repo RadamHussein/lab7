@@ -136,3 +136,31 @@ int List::removeFront()
 		return value;
 	}
 }
+
+/**************************************************************
+ * removeBack()
+**************************************************************/
+int List::removeBack()
+{
+	Node *ptrNode, *previousPtrNode;
+
+	if (!head)
+	{
+		return 0;
+	}
+	
+	else 
+	{
+		Node *previousPtrNode = head;
+		Node *ptrNode = head->next;
+		while (ptrNode->next != NULL)
+		{
+			previousPtrNode = ptrNode;
+			ptrNode = ptrNode->next;
+		}
+		int nodeVal = ptrNode->value;
+		delete ptrNode;
+		previousPtrNode->next = NULL;
+		return nodeVal;
+	}
+}

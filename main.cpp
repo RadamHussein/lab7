@@ -26,7 +26,8 @@ int main()
 	cout << "Now we will remove the first item from the list" << endl;
 	cout << "Press [ENTER] to continue: ";
 	cin.get();
-	myList.remove(10);
+	cout << endl;
+	cout << myList.removeFront() << " has been removed fro the list";
 	cout << endl;
 	myList.print();
 	cout << endl << endl;
@@ -47,11 +48,11 @@ int main()
 	myList.print();
 	cout << endl << endl;
 	
-	cout << "Now we will remove the first number in the list" << endl;
+	cout << "Now we will remove the last number in the list" << endl;
 	cout << "Press [ENTER] to continue: ";
 	cin.get();
 	cout << endl;
-	cout << myList.removeFront() << " has been removed from the list";
+	cout << myList.removeBack() << " has been removed from the list";
 	cout << endl;
 	myList.print();
 	cout << endl << endl;
