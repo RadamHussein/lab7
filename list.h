@@ -12,6 +12,5 @@ public:
 	void addBack(int number);
 	int removeFront();
 	int removeBack();
-	void remove(int number);	//remove later
 	void print() const;
 };

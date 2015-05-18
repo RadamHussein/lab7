@@ -3,14 +3,19 @@
 
 using namespace std;
 /*******************************************************************
- * List() constructor
+ * Function: List() constructor
+ * Description: Initializes the head pointer to NULL
+ * Parameters: none
  *******************************************************************/
 List::List()
 {
 	head = NULL;
 }
 /********************************************************************
- * addBack
+ * Function: addBack()
+ * Description: Takes in an int, creates a new node with the int, 
+		and adds the node to the back of the list
+ * Parameters: Takes in an integer value
  *******************************************************************/
 void List::addBack(int number)
 {
@@ -31,7 +36,10 @@ void List::addBack(int number)
 }
 
 /********************************************************************
- * addFront()
+ * Function: addFront()
+ * Description: Takes in an int, creates a new Node with int value, 
+		then adds the node to the front of the list
+ * Parameters: Takes in an integer value
 ********************************************************************/
 void List::addFront(int number)
 {
@@ -51,11 +59,13 @@ void List::addFront(int number)
 	}
 }	
 /********************************************************************
- * destructor
+ * Function: List() destructor
+ * Description: destroys the list
+ * Parameters: none
  *******************************************************************/
 List::~List()
 {
-	Node *ptrNode = head;
+	Node *ptrNode = head;	//begin at head of list
 	while (ptrNode != NULL)
 	{
 		Node *garbage = ptrNode;
@@ -65,7 +75,9 @@ List::~List()
 }
 
 /********************************************************************
- * print()
+ * Function: print()
+ * Description: transverses the list printing the value at each node
+ * Parameters: none
  *******************************************************************/
 void List::print() const
 {	
@@ -78,45 +90,12 @@ void List::print() const
 	}
 }
 
-/********************************************************************
- * remove()
- *******************************************************************/
-void List::remove(int number)
-{
-	Node *ptrNode, *previousPtrNode;
-
-	if (!head)
-	{
-		return;
-	}
-	
-	if (head->value == number)
-	{
-		ptrNode = head;
-		head = head->next;
-		delete ptrNode;
-	}
-
-	else
-	{
-		ptrNode = head;
-		
-		while (ptrNode != NULL && ptrNode->value != number)
-		{
-			previousPtrNode = ptrNode;
-			ptrNode = ptrNode->next;
-		}
-
-		if (ptrNode)
-		{
-			previousPtrNode->next = ptrNode->next;
-			delete ptrNode;
-		}
-	}
-}
-
 /**************************************************************
- * removeFront()
+ * Function: removeFront()
+ * Description: Removes and element from the front of the list
+		and updates remaining pointers
+ * Parameters: none
+ * Output: returns and integer value
 **************************************************************/
 int List::removeFront()
 {
@@ -129,7 +108,7 @@ int List::removeFront()
 	
 	else
 	{	
-		int value = head->value;
+		int value = head->value;	//store val to return
 		ptrNode = head;
 		head = head->next;
 		delete ptrNode;
@@ -138,12 +117,16 @@ int List::removeFront()
 }
 
 /**************************************************************
- * removeBack()
+ * Function: removeBack()
+ * Description: removes an element from the back of the list
+ * Parameters: none
+ * Output: returns and integer value
 **************************************************************/
 int List::removeBack()
 {
 	Node *ptrNode, *previousPtrNode;
 
+	//check if list is empty
 	if (!head)
 	{
 		return 0;
@@ -153,11 +136,15 @@ int List::removeBack()
 	{
 		Node *previousPtrNode = head;
 		Node *ptrNode = head->next;
+
+		//iterate through list skipping middle values
 		while (ptrNode->next != NULL)
 		{
 			previousPtrNode = ptrNode;
 			ptrNode = ptrNode->next;
 		}
+
+		//create variable to return 
 		int nodeVal = ptrNode->value;
 		delete ptrNode;
 		previousPtrNode->next = NULL;
